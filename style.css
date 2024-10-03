@@ -1,0 +1,340 @@
+@import url("https://fonts.cdnfonts.com/css/akira-expanded");
+@import url("https://fonts.cdnfonts.com/css/coolvetica");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Akira Expanded", sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+  padding: 0 16px;
+  color: rgb(125, 219, 180);
+  background: black;
+}
+
+.section {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.sectionAp {
+  min-height: 70vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centrer le contenu verticalement */
+  align-items: center; /* Centrer le contenu horizontalement */
+  margin: auto;
+}
+
+footer {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section h1 {
+  font-size: 40px;
+  font-weight: 100;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .section h1 {
+    font-size: 70px;
+  }
+}
+
+.section span {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .section span {
+    width: fit-content;
+    position: absolute;
+    right: -120px;
+    bottom: -26px;
+    margin-top: 0;
+  }
+}
+
+.section h3 {
+  font-size: 30px;
+  font-weight: 300;
+  margin-top: 100px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+.text {
+  width: 100%;
+  font-size: 24px;
+}
+
+@media (min-width: 1024px) {
+  .text {
+    height: 300px;
+    top: 30%;
+    position: sticky;
+    width: 45%;
+  }
+}
+
+.cards {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px 0;
+}
+
+@media (min-width: 1024px) {
+  .cards {
+    width: 45%;
+  }
+}
+
+.card {
+  position: sticky;
+  top: 20%;
+  right: 400px;
+  width: 300px;
+  height: 450px;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: black;
+  border: 5px solid #79f034;
+  margin: 0 auto;
+}
+
+.card a {
+  text-decoration: none;
+  color: #ffffff; /* Couleur de texte par défaut */
+  transition: color 0.3s, border-bottom 0.3s; /* Ajoute une transition pour un effet plus fluide */
+}
+
+.card a:hover {
+  color: #33ee6b; /* Change la couleur du texte lors du survol */
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 900px;
+    top: 30%;
+  }
+}
+
+.card span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+.card:nth-child(2) {
+  border: 5px solid #03eeff;
+  color: #ff51bc;
+}
+
+.card:nth-child(3) {
+  border: 5px solid #e37d11;
+  color: #e37d11;
+}
+
+
+.card:nth-child(4) {
+  border: 5px solid #642aec;
+  color: #642aec;
+}
+
+.card:nth-child(5) {
+  border: 5px solid #da1c8a;
+}
+.card:nth-child(6) {
+  border: 5px solid #a73eee;
+}
+
+/* Add your existing styles here */
+
+.accordion {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active,
+.accordion > h4:hover {
+
+  color: #33ee6b;
+}
+
+.active {
+  background-color: #000000; /* Black background */
+  color: #ffffff; /* White text */
+}
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+h4 {
+  font-family: "coolvetica", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+#tp2 {
+  width: 40%; /* Ajustez ce pourcentage selon vos besoins */
+  height: auto;
+  padding-left: 25%;
+}
+
+.travaux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+nav ul {
+  list-style-type: none; /* Supprime les puces */
+  padding: 0; /* Supprime le rembourrage */
+  display: flex; /* Rend la liste flexible */
+  flex-direction: row;
+  gap: 20px; /* Ajoute un espace entre les éléments */
+  justify-content: space-evenly; /* Centre les éléments horizontalement */
+}
+@keyframes border-color-change {
+  0% {
+    border-color: transparent;
+  }
+  20% {
+    border-color: #70e293;
+  }
+  40% {
+    border-color: #e37d11;
+  }
+  60% {
+    border-color: #03eeff;
+  }
+  80% {
+    border-color: #e2e270;
+  }
+  100% {
+    border-color: #da1c8a;
+  }
+}
+
+nav a {
+  text-decoration: none; /* Supprime les soulignements */
+  color: #ffffff;
+  padding: 10px; /* Ajoute un rembourrage autour du texte */
+  border-radius: 5px; /* Arrondit les coins */
+  border: 1px solid transparent; /* Définit une bordure transparente pour l'état normal */
+  transition: border-color 1s ease; /* Ajoute une transition à la propriété border-color */
+}
+
+nav a:hover {
+  animation: border-color-change 5s forwards infinite; /* Applique l'animation lors du survol */
+}
+nav {
+  position: sticky; /* Rend la navigation collante */
+  top: 0; /* La navigation restera en haut de la page */
+  width: 100%; /* La navigation prendra toute la largeur de la page */
+  z-index: 3; /* Un nombre plus grand que celui des autres éléments */
+  position: relative; /* z-index ne fonctionne que sur les éléments positionnés */
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.cards h1 {
+  position: sticky;
+  top: 17%; /* Le h1 restera en haut de la page */
+}
+.cards .card {
+  margin-bottom: 100vh; /* Espacement égal à la hauteur de la fenêtre de visualisation */
+}
+h3{
+  font-family: "coolvetica", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+p{
+  font-family: "coolvetica", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 1px;
+}
+
+
+.image-gallery {
+  display: flex;
+  flex-direction: row;
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-gallery img {
+  width: calc(50% - 2%); /* Adjust this value as needed */
+  margin: 1%; /* Adjust this value as needed */
+  transition: transform 0.3s ease-in-out; /* Animation will take 0.3 seconds */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.1); /* Image will scale up to 110% of its original size */
+}
+
+.video-gallery iframe {
+  width: calc(20% - 2%); /* Adjust this value as needed */
+  margin: 5%; /* Adjust this value as needed */
+}
